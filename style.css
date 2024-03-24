@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: #edeef0;
+}
+body {
+  display: flex;
+}
+#bg {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+}
+.status {
+  display: none;
+}
+
+.priority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  background: radial-gradient(
+    circle,
+    rgba(43, 62, 97, 0.581) 0%,
+    rgba(22, 50, 84, 0.561) 100%
+  );
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+.container {
+  font-family: "Ubuntu";
+  margin: auto;
+  padding-top: 200px;
+}
+.god {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.god-child {
+  display: flex;
+  justify-content: center;
+
+  gap: 30px;
+}
+h1 {
+  position: absolute;
+  top: 50px;
+}
+.gg {
+  width: 300px;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(43, 62, 97, 0.581) 0%,
+    rgba(22, 50, 84, 0.561) 100%
+  );
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0, 0.9);
+  border-radius: 8px;
+  margin: auto;
+  padding: 20px;
+}
+.gg:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.modal {
+  width: 400px;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(43, 62, 97, 0.581) 0%,
+    rgba(22, 50, 84, 0.561) 100%
+  );
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0, 0.9);
+  border-radius: 8px;
+  margin: auto;
+  padding: 20px;
+}
+
+.content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 260px;
+  min-height: 270px;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+}
+.addcard {
+  width: 100px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.addcard:hover {
+  transform: translateX(10px);
+  color: #444;
+}
+.last {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.last-content {
+  width: 360px;
+  padding: 10px 0px;
+}
+.last-content p {
+  font-weight: 500;
+}
+#title {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #edeef0;
+  border-radius: 4px;
+}
+#des {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: 2px solid #edeef0;
+  border-radius: 4px;
+}
+#status {
+  width: 40%;
+  background-color: transparent;
+  border: 2px solid #edeef0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+#priority {
+  width: 50%;
+  background-color: transparent;
+  border: 2px solid #edeef0;
+  border-radius: 4px;
+}
+#btn {
+  width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(17, 69, 165, 0.581) 0%,
+    rgba(3, 40, 90, 0.561) 100%
+  );
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0, 0.9);
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#err-message {
+  color: red;
+  font-size: 14px;
+}
+
+.card {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 28px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: radial-gradient(
+    circle,
+    rgba(91, 132, 207, 0.581) 0%,
+    rgba(59, 100, 154, 0.561) 100%
+  );
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0, 0.9);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.edit {
+  width: 15px;
+  height: 15px;
+}
+.edit-father {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.edit-father:hover {
+  background-color: #edeef0;
+}
+.checked {
+  display: none;
+}
+.check {
+  width: 20px;
+  height: 20px;
+}
+.ch {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  top: 13px;
+  left: 4px;
+}
+.card.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+.card span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 50%;
+}
+.card span:hover {
+  background: #edeef0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flex p {
+  font-size: 22px;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 6px;
+  color: #edeef0;
+}
+.flex p:hover {
+  background-color: #edeef0;
+}
+.card {
+  display: block;
+}
+.card2 {
+  margin-bottom: 5px;
+  padding: 10px;
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.container:last-child .checked {
+  display: flex;
+}
+.container:last-child .card {
+  text-decoration: line-through;
+}
+.count {
+  font-size: 20px;
+  margin-left: 5px;
+}

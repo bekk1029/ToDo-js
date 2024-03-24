@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>To do</title>
+  </head>
+  <body>
+    <div class="god">
+      <img id="bg" src="/img/bg1.jpg" alt="bgimage" />
+
+      <div class="god-child">
+        <div class="container">
+          <div class="first gg">
+            <h2>To do <span class="count" id="todo-count"></span></h2>
+            <div class="first-content content" id="todo">
+              <h4 style="margin-bottom: 5px">To do list</h4>
+              <hr />
+              <div class="cards"></div>
+            </div>
+            <p class="addcard">+ Add card</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="first gg">
+            <h2>
+              In progress <span class="count" id="inprogress-count"></span>
+            </h2>
+            <div class="first-content content" id="inprogress">
+              <h4 style="margin-bottom: 5px">To do list</h4>
+              <hr />
+              <div class="cards"></div>
+            </div>
+            <div class="first-content"></div>
+            <p class="addcard">+ Add card</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="first gg">
+            <h2>Stuck <span class="count" id="stuck-count"></span></h2>
+            <div class="first-content content" id="stuck">
+              <h4 style="margin-bottom: 5px">To do list</h4>
+              <hr />
+              <div class="cards"></div>
+            </div>
+            <p class="addcard">+ Add card</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="first gg">
+            <h2>Done <span class="count" id="done-count"></span></h2>
+            <div class="first-content content" id="done">
+              <h4 style="margin-bottom: 5px">To do list</h4>
+              <hr />
+              <div class="cards"></div>
+            </div>
+            <p class="addcard">+ Add card</p>
+          </div>
+
+          <!-- part2 -->
+
+          <form class="last modal" action="#">
+            <div class="last-content">
+              <div class="flex">
+                <h2>Add task</h2>
+                <p class="flex2">✖</p>
+              </div>
+
+              <p>Title</p>
+              <input type="text" id="title" name="title" required />
+
+              <p style="margin-top: 15px">Description</p>
+              <textarea type="text" id="des" required></textarea>
+
+              <p>Status</p>
+              <select name="format" id="status">
+                <option value="todo">To do</option>
+                <option value="inprogress">In progress</option>
+                <option value="stuck">Stuck</option>
+                <option value="done">Done</option>
+              </select>
+              <p>Priority</p>
+              <select name="priority" id="priority">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+              </select>
+
+              <!-- onclick="AddTask ()" -->
+              <button id="btn" type="submit">Add task</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
